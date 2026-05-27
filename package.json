@@ -1,0 +1,67 @@
+{
+  "name": "termcast",
+  "version": "1.0.0",
+  "description": "🎬 Intelligent terminal recording and playback tool with AI-powered annotations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "termcast": "./bin/termcast.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/termcast.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "pack:all": "pkg . --targets node18-linux-x64,node18-macos-x64,node18-win-x64 --out-path dist/bin"
+  },
+  "keywords": [
+    "terminal",
+    "recording",
+    "playback",
+    "asciinema",
+    "cli",
+    "tty",
+    "session",
+    "demo",
+    "screencast"
+  ],
+  "author": "gitstq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitstq/termcast"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "date-fns": "^2.30.0",
+    "fs-extra": "^11.2.0",
+    "ink": "^4.4.1",
+    "node-pty": "^1.0.0",
+    "ora": "^5.4.1",
+    "react": "^18.2.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/uuid": "^9.0.7",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "@vercel/ncc": "^0.38.1",
+    "pkg": "^5.8.1"
+  }
+}
